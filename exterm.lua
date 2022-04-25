@@ -13,13 +13,12 @@ local keymap = require "core.keymap"
 local config = require "core.config"
 local os = require "os"
 local command = require "core.command"
+local common = require "core.common"
 
-config.plugins.exterm = {}
-
--- Sorry, this is the default terminal executable
-
-config.plugins.exterm.executable = "cmd"
-config.plugins.exterm.keymap = "ctrl+shift+space"
+config.plugins.exterm = common.merge({
+  executable = "cmd",
+  keymap = "ctrl+shift+space"
+}, config.plugins.exterm)
 
 command.add(nil, {
   ["exterm:open-terminal"] = function()
@@ -29,7 +28,7 @@ command.add(nil, {
         os.execute('start "" ' .. config.plugins.exterm.executable)
       elseif PLATFORM == "Linux" or PLATFORM == "Mac OS X" then
         os.execute(config.plugins.exterm.executable .. " &")
-      else 
+      else
         core.error("Exterm: Platform not supported")  
       end
   end
