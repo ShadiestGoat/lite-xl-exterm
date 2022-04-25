@@ -18,7 +18,7 @@ config.plugins.exterm = {}
 
 -- Sorry, this is the default terminal executable
 
-config.plugins.exterm.executable = "urxvt"
+config.plugins.exterm.executable = "cmd"
 config.plugins.exterm.keymap = "ctrl+shift+space"
 
 command.add(nil, {
