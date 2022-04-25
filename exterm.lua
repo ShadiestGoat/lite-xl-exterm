@@ -25,7 +25,13 @@ command.add(nil, {
   ["exterm:open-terminal"] = function()
   -- adds the & for background process, idk if it works for windows
   -- also, it opens in the project dir, since the working dir = project dir, and terminals open in the working dir :)
-    os.execute(config.plugins.exterm.executable .. " &")
+      if PLATFORM == "Windows" then
+        os.execute('start "" ' .. config.plugins.exterm.executable)
+      elseif PLATFORM == "Linux" or PLATFORM == "Mac OS X" then
+        os.execute(config.plugins.exterm.executable .. " &")
+      else 
+        core.error("Exterm: Platform not supported")  
+      end
   end
 })
 
