@@ -16,5 +16,5 @@ There are 2 optionns - the terminnal to run, and the shortcut. The plugin proper
 
 | Name | Description | Type | Value |
 |:-:|:-:|:-:|:-:|
-| executable | The command to run in order to open the terminal | string | urxvt |
+| executable | The command to run in order to open the terminal | string | cmd |
 | keymap | The shortcut for the command | string | ctrl+shift+space |
