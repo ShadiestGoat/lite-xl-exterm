@@ -2,6 +2,8 @@
 
 This is a plugin that lets you open an external terminal, in case you also hate integrated ones. It opens the terminnal in the project directory.
 
+This definetly works on linux, I'm like 90% sure it works on mac, and 70% sure it works on windows :)
+
 ## Installation
 
 Just download the `exterm.lua` :)
