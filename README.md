@@ -20,3 +20,5 @@ There are 2 optionns - the terminnal to run, and the shortcut. The plugin proper
 |:-:|:-:|:-:|:-:|
 | executable | The command to run in order to open the terminal | string | cmd |
 | keymap | The shortcut for the command | string | ctrl+shift+space |
+
+\*editing the keymap setting will need a module reload before coming into effect
