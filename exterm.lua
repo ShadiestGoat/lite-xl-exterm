@@ -10,7 +10,8 @@
 
 local core = require "core"
 local keymap = require "core.keymap"
-local plugins = require "core.config.plugins"
+local config = require "core.config"
+local plugins = config.plugins
 local os = require "os"
 local command = require "core.command"
 local common = require "core.common"
